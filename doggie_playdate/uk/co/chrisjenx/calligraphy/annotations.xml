@@ -1,0 +1,5 @@
+<root>
+    <item name='uk.co.chrisjenx.calligraphy.CalligraphyConfig'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navI_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/navI_messaging"
+            android:icon="@drawable/ic_messaging"
+            android:title="Messages"
+            app:actionLayout="@layout/nav_bar_unread_messages"/>
+        <item
+            android:id="@+id/navI_makeplaydate"
+            android:icon="@drawable/ic_schedule"
+            android:title="Create Playdate" />
+
+        <item
+            android:id="@+id/navI_playdates"
+            android:icon="@drawable/ic_playdate"
+            android:title="My Playdates"/>
+        <item
+            android:id="@+id/navI_userprofile"
+            android:icon="@drawable/ic_userprofile"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/navI_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Account Settings" />
+        <item
+            android:id="@+id/action_logout"
+            android:icon="@drawable/ic_exit"
+            android:title="Logout" />
+    </group>
+
+</menu>

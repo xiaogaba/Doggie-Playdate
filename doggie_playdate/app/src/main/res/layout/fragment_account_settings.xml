@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+<RelativeLayout
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Settings"
+        android:textSize="35dp"/>
+
+    <FrameLayout
+        android:id="@+id/settingsPicFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingsTitle"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/settingsProfilePic"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/default_profile_pic"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"/>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/buttonChangeProfilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="change profile pic"
+        android:textSize="7dp"
+        android:layout_below="@id/settingsPicFrame"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/setStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set my status as: "
+        android:textSize="15dp"
+        android:layout_below="@id/buttonChangeProfilePic"
+        android:layout_marginTop="30dp"/>
+
+    <Spinner
+        android:id="@+id/userStatusSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonChangeProfilePic"
+        android:layout_toRightOf="@id/setStatusTextView"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/spinner_bg" />
+
+    <TextView
+        android:id="@+id/removeDogTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove dog profile"
+        android:textSize="15dp"
+        android:layout_below="@id/setStatusTextView"
+        android:layout_marginTop="50dp"/>
+    <RelativeLayout
+        android:id="@+id/removeDogFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/removeDogTextView"
+        android:layout_below="@id/setStatusTextView"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp">
+
+        <Button
+            android:id="@+id/buttonRemoveDog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Press"
+            android:visibility="visible"/>
+        <Spinner
+            android:id="@+id/removeDogSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_bg"
+            android:visibility="invisible"/>
+        <Button
+            android:id="@+id/buttonConfirmRemoveDog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:layout_below="@+id/removeDogSpinner"
+            android:visibility="invisible"/>
+        <TextView
+            android:id="@+id/tvNoDogs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(no dogs in your profile)"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="invisible"/>
+        <Button
+            android:id="@+id/buttonCancelRemoveDog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_below="@+id/buttonConfirmRemoveDog"
+            android:visibility="invisible"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>

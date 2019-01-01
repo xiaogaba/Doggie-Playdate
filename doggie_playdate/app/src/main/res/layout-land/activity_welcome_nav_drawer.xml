@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/menu_navdrawer"
+        app:theme="@style/MyDrawerStyle"
+        app:itemTextAppearance="@style/MyDrawerStyle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/mapframe"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="20">
+
+            <com.github.glomadrian.materialanimatedswitch.MaterialAnimatedSwitch
+                android:id="@+id/location_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon_release="@drawable/ic_location_off"
+                app:icon_press="@drawable/ic_location_on"
+                app:base_release_color="@color/baseReleaseColor"
+                app:ball_release_color="@color/ballReleaseColor"
+                app:ball_press_color="@android:color/white"/>
+
+            <Button
+                android:id="@+id/btnMessage"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:layout_gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/btnCreatePlaydate"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:text="Create playdate"
+                android:layout_gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/btn_request_date"
+                android:text="request date"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageView
+                android:id="@+id/imgExpandable"
+                android:paddingRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

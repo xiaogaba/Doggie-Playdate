@@ -1,0 +1,5 @@
+<root>
+    <item name='dmax.dialog.SpotsDialog'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

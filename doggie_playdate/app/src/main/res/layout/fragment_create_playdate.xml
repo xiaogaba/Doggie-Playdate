@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/cpInvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invite: "
+        android:textSize="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="showUsers"/>
+
+    <EditText
+        android:id="@+id/cpInviteList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/cpInvite"
+        android:layout_marginLeft="10dp"
+        android:textSize="16dp"
+        android:focusable="false"/>
+
+    <LinearLayout
+        android:id="@+id/cpLL3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cpInvite"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Users within: "/>
+        <Spinner
+            android:id="@+id/cpFilterSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cpLL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/cpLL3">
+
+        <EditText
+            android:id="@+id/cpETDate"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:hint="Pick Date"
+            android:focusable="false"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/cpETTime"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cpInvite"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:hint="and Time"
+            android:focusable="false"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cpLL2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cpLL1"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Location: "
+            android:textSize="20dp"
+            android:layout_below="@id/cpLL1"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="top"/>
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="(google place autocomplete frag)"
+            android:textSize="13dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/cpLL2"
+        android:minHeight="390dp">
+
+        <EditText
+            android:id="@+id/inputLatitude"
+            android:layout_width="100dp"
+            android:hint="Latitude"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:inputType="numberDecimal|numberSigned"/>
+
+        <EditText
+            android:id="@+id/inputLongitude"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Longitude"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:inputType="numberDecimal|numberSigned"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maps frag"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/cpButtonCreatePlaydate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set up playdate"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+</ScrollView>

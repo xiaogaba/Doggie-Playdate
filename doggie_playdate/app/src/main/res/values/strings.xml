@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Doggie Playdate</string>
+    <string name="title_activity_welcome">Map</string>
+    <string name="google_direction_api">AIzaSyCwsSV7odGuDJ3m9u2_IUKBW9k0EbjWtx8</string>
+    <string name="title_activity_google_maps_api">AIzaSyCos7PSj2745BJqOeuMLufh8CTq7ZSlh0w</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+    <string name="mainactivitytitle">D O G G I E
+        \nP L A Y D A T E</string>
+    <string name="title_activity_customer_call">CustomerCall</string>
+    <string name="title_activity_driver_tracking">DriverTracking</string>
+</resources>

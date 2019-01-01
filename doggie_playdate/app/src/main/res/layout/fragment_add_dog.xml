@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/addDogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Dog Profile"
+        android:textSize="35sp"/>
+
+    <TextView
+        android:id="@+id/addDogAddPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile pic:"
+        android:textSize="20sp"
+        android:layout_below="@+id/addDogTitle"
+        android:layout_marginTop="55dp"/>
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/dogPic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/defaultdogpic"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to edit"
+        android:textSize="10dp"
+        android:layout_below="@id/fl"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/addDogName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="20sp"
+        android:layout_below="@+id/addDogAddPic"
+        android:layout_marginTop="80dp"/>
+
+    <EditText
+        android:id="@+id/addDogEditName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/addDogName"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="-7dp"
+        android:layout_toRightOf="@id/addDogName"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/addDogBreed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breed:"
+        android:textSize="20sp"
+        android:layout_below="@+id/addDogName"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/addDogEditBreed"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addDogEditName"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="-2dp"
+        android:layout_toRightOf="@id/addDogBreed"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/addDogGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        android:textSize="20sp"
+        android:layout_below="@id/addDogBreed"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/addDogRadioGroupGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@id/addDogGender"
+        android:layout_below="@+id/addDogEditBreed"
+        android:layout_marginTop="10dp">
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/addDogRadioM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"/>
+
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/addDogRadioF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/addDogBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Birthday:"
+        android:textSize="20sp"
+        android:layout_below="@id/addDogGender"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/addDogEditBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/addDogBirthday"
+        android:layout_below="@+id/addDogRadioGroupGender"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="6dp"
+        android:hint="Press to choose"
+        android:focusable="false"/>
+
+
+    <TextView
+        android:id="@+id/addDogSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size:"
+        android:textSize="20sp"
+        android:layout_below="@id/addDogBirthday"
+        android:layout_marginTop="20dp"/>
+    <RadioGroup
+        android:id="@+id/addDogRadioGroupSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@id/addDogGender"
+        android:layout_below="@+id/addDogBirthday"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/addDogRadioSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Small"/>
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/addDogRadioMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"/>
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/addDogRadioLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Large"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/addDogButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD DOG"
+        android:layout_below="@+id/addDogRadioGroupSize"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
+</ScrollView>
